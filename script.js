@@ -161,14 +161,8 @@ function informacion(){
     <li>El test no envía datos a servidores externos por defecto.</li>
   </ul>
 
-  <h5>Mejoras sugeridas</h5>
-  <ol>
-    <li>Feedback visual (acierto/error) con colores y animaciones.</li>
-    <li>Guardar/recuperar listas personalizadas con <code>localStorage</code>.</li>
-    <li>Opción de traducción automática (requiere API externa o un diccionario local).</li>
-  </ol>
-
-  <p style="font-size:0.9rem; color:#666">¿Quieres que implemente ya alguna de las mejoras (feedback visual / localStorage / traducción)? Dime cuál y la añadimos.</p>
+  
+  <p style="font-size:0.9rem; color:#666">El pedazo trabajo de Nico y Adrián</p>
   `;
 
   showModal(contenido, false);
