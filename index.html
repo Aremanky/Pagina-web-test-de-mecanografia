@@ -10,14 +10,76 @@
 </head>
 
 <body>
-  <p> EJERCICIO MECANOGRAFÍA</p>
-  <button id="btnComienzo">Comenzar Test</button>
-  <p> Tiempo (sgs): <span id="tiempo">0</span></p>
-  <p> Palabras correctas: <span id="palabrasCorrectas">0</span></p>
-  <p> Palabra de muestra: <span id="palabraDeMuestra">*******</span></p>
-  <input type="text" id="entrada" autocomplete="off" placeholder="Escriba la palabra" />
-  <button id="btnpausa">Pausar Test</button>
-  <button id="btnReinicio">Reiniciar Test</button>
+  <!--¿No se suponía que no se podía usar <p>?-->
+  <header>
+    <h1> EJERCICIO MECANOGRAFÍA</h1>
+    <div>
+      <button id="btnInfo" title="Info">ℹ️ Información</button>
+      <button id="btnAjustes">⚙️ Mostrar Ajustes</button>
+    </div>
+  </header>
+
+  <section id="ajustes" style="display: none;">
+    <h3>Ajustes del Test</h3>
+    <div class="ajuste-item">
+      <label for="nPalabras">Número de palabras:</label>
+      <input type="number" id="nPalabras" min="1" autocomplete="off" placeholder="Inserte nº de palabras a realizar" />
+    </div>
+
+    <div class="ajuste-item">
+      <label for="nTiempo">Tiempo máximo (s):</label>
+      <input type="number" id="nTiempo" min="30" autocomplete="off" placeholder="Inserte tiempo límite" />
+    </div>
+
+    <div class="ajuste-item">
+      <p>Nivel actual: <span id="nivelActual">fácil</span> (Cambia antes de empezar con 1, 2, 3 o 4)</p>
+    </div>
+
+    <div class="ajuste-item">
+    <label for="palabrasPlus">Añadir palabras (inglés, español):</label>
+    <input type="text" id="palabrasPlus" autocomplete="off" placeholder="dog, perro" />
+    <button id="inserta_palabra">Guardar palabra en nivel actual</button>
+    </div>
+  </section>
+
+  <section id="test">
+    <div class="resultado">
+      <p> Tiempo (s): <span id="tiempo">0</span></p>
+      <p> Puntos (s): <span id="puntos">0</span></p>
+      <p> Palabras correctas: <span id="palabrasCorrectas">0</span></p>
+    </div>
+
+    <div class="palabra">
+      <p> Palabra de muestra: <span id="palabraDeMuestra">*******</span></p>
+      <input type="text" id="entrada" autocomplete="off" placeholder="Escriba la palabra" />
+      <div id="feedbackIcon" class="feedback-icon" aria-hidden="true"></div>
+    </div>
+
+    <div class="botones">
+      <button id="btnComienzo">Comenzar Test</button>
+      <button id="btnpausa">Reanudar Test</button>
+      <button id="btnReinicio">Reiniciar Test</button>
+    </div>
+  </section>
+
+  
+  
+  
+
+  <div id="modal" class="modal" aria-hidden="true" style="display:none;">
+    <div id="modalOverlay" class="modal-overlay"></div>
+    <div class="modalTexto" role="dialog" aria-modal="true">
+      <div class="modalContenido">
+        <h3 id="modalTitulo">Mensaje</h3>
+        <div id="modalCuerpo"></div>
+        <div class="modalAccion">
+          <button id="modalAceptar">Aceptar</button>
+          <button id="modalReset" style="display:none;">Reiniciar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 
 </html>

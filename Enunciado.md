@@ -5,7 +5,7 @@ El proyecto consiste en una aplicación web para testar la velocidad en mecanogr
 El objetivo de la actividad es el aprendizaje de las siguientes técnicas:
 
 - realizar composiciones apoyándose en flexbox/grid
-- manejo de intervalos
+- manejo de intervalos                                          (HECHO)
 - interacción con el usuario mediante teclado
 
 # Consideraciones
@@ -15,8 +15,8 @@ que contabiliza y muestra en id="tiempo" el tiempo transcurrido en segundos.
 
 Si la palabra tecleada coincide con la palabra de muestra entonces:
 
-- se incrementa el número de palabras correctas (id="palabrasCorrectas")
-- se cambia la palabra de muestra.
+- se incrementa el número de palabras correctas (id="palabrasCorrectas")         (HECHO)
+- se cambia la palabra de muestra.                                               (HECHO)
 
 NOTA: En el módulo utils.js se exporta una función **recuperaElementoAleatorio(array)** que puede ser empleada para seleccionar la palabra de muestra que será mostrada en id="palabraDeMuestra" durante el transcurso del test (considerando que las todas las palabras disponibles están almacenadas en un array.)
 
@@ -48,10 +48,10 @@ La implementación se apoya en:
 
 # Variantes
 
-- Permitir que el usuario puede pausar temporalmente el test
-- Fijar de antemano el número de palabras que deben ser mecanografiadas
-- Facilitar distintos juegos de palabras
-- Poder fijar un tiempo máximo (para medir cuantas palabras correctas se han mecanografiado en dicho tiempo)
-- Test bilingue: la palabra se muestra en un idioma (ej: inglés) y se debe mecanografiar otro (ej: español)
+- Permitir que el usuario puede pausar temporalmente el test                                                    (HECHO)
+- Fijar de antemano el número de palabras que deben ser mecanografiadas                                         (HECHO)
+- Facilitar distintos juegos de palabras                                                                        (HECHO)
+- Poder fijar un tiempo máximo (para medir cuantas palabras correctas se han mecanografiado en dicho tiempo)    (HECHO)
+- Test bilingue: la palabra se muestra en un idioma (ej: inglés) y se debe mecanografiar otro (ej: español)     (HECHO)
 - Asociar acciones a teclas numéricas (ej: Cada número es un nivel de dificultad de las palabras)
-- Añadir un componente explicativo mediante una ventana modal
+- Añadir un componente explicativo mediante una ventana modal                                                   (HECHO)
